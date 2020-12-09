@@ -28,13 +28,13 @@ library("effects")
 setwd("C:\\Users\\cyx\\Downloads\\archive")
 #read files
 data1 = read.csv(file = "fundamentals.csv",header=TRUE, sep = ",")
-data2 = read.csv(file = "prices-split-adjusted.csv",header=TRUE, sep = ",")
-data3 = read.csv(file = "prices.csv",header=TRUE, sep = ",")
-data4 = read.csv(file = "securities.csv",header=TRUE, sep = ",")
+#data2 = read.csv(file = "prices-split-adjusted.csv",header=TRUE, sep = ",")
+#data3 = read.csv(file = "prices.csv",header=TRUE, sep = ",")
+#data4 = read.csv(file = "securities.csv",header=TRUE, sep = ",")
 #we only use "fundamentals.csv"
 
 data1$Ticker.Symbol = as.factor(data1$Ticker.Symbol)
-
+new_data <- data1
 #filter data
 new_data <- filter(new_data,!is.na(For.Year))
 new_data <- filter(new_data,!is.na(Earnings.Per.Share))
